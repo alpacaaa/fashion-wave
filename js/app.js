@@ -9,8 +9,11 @@ $(document).ready(function() {
   };
 
   var updateSelectedKeywords = function(id) {
+    var el = keywords_list.find('li[data-id="' + id + '"]');
+    el.addClass('selected active');
 
-  }
+    keywords_list.removeClass('active');
+  };
 
 
   // INIT (chrome moddafaca)
@@ -55,7 +58,7 @@ $(document).ready(function() {
     html.addClass('list-transition-out');
     scrollUp();
 
-    var parent = $(this).closest('keyword-detail'),
+    var parent = $(this).closest('.keyword-detail'),
       id = parent.data('id');
 
     updateSelectedKeywords(id);

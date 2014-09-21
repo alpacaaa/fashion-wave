@@ -19,6 +19,17 @@ figure {
 h1, h2, h3 {
   font-weight: 100; }
 
+h1 {
+  background: url('../img/logo.png');
+  text-indent: -999em;
+  width: 230px;
+  height: 66px;
+  background-size: cover; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  h1 {
+    background-image: url('../img/logo@2x.png'); } }
+
 h2 {
   width: 100%;
   font-size: 48px; }
@@ -32,7 +43,7 @@ h4 {
   margin-bottom: 0.75em; }
 
 #header {
-  padding: 1.5em 0;
+  padding: 0.75em 0;
   border-bottom: 1px solid #ccc; }
 
 .home {
@@ -232,6 +243,8 @@ h4 {
     cursor: pointer; }
   .keywords-list li[data-type="man"], .keywords-list li[data-type="woman"] {
     display: none; }
+  .keywords-list li[data-id].selected.active {
+    font-weight: bold; }
 
 .woman-selected .keywords-list li[data-type="woman"] {
   display: block; }
