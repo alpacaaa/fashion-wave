@@ -8,10 +8,20 @@ $(document).ready(function() {
     hbody.animate({ scrollTop: 0 }, 'slow');
   };
 
+  var updateSelectedKeywords = function(id) {
 
-  setTimeout(function() {
-    html.addClass('home-transition-in');
-  }, 100);
+  }
+
+
+  // INIT (chrome moddafaca)
+  $(window).load(function() {
+    setTimeout(function() {
+      html.addClass('home-transition-in');
+    }, 100);
+  });
+
+
+
 
   var genders = $('.gender');
   genders.click(function() {
@@ -42,6 +52,11 @@ $(document).ready(function() {
   $('.list-step .keyword-detail .item-detail').click(function() {
     html.addClass('list-transition-out');
     scrollUp();
+
+    var parent = $(this).closest('keyword-detail'),
+      id = parent.data('id');
+
+    updateSelectedKeywords(id);
 
     setTimeout(function() {
       html.removeClass('show-list list-transition-in list-transition-out')
