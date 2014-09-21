@@ -58,10 +58,13 @@ $(document).ready(function() {
     html.addClass('list-transition-out');
     scrollUp();
 
-    var parent = $(this).closest('.keyword-detail'),
-      id = parent.data('id');
+    var self = $(this),
+      parent = self.closest('.keyword-detail'),
+      id = self.data('id') || 'merda';
 
-    updateSelectedKeywords(id);
+    updateSelectedKeywords(parent.data('id'));
+
+    $('.buyable_item .item-detail[data-id != "' + id + '"]').hide();
 
     setTimeout(function() {
       html.removeClass('show-list list-transition-in list-transition-out')

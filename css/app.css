@@ -20,8 +20,8 @@ h1, h2, h3 {
   font-weight: 100; }
 
 h1 {
-  width: 230px;
-  height: 66px; }
+  width: 250px;
+  height: 72px; }
 
 h1 a {
   display: block;
@@ -35,7 +35,7 @@ h1 a {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
   h1 a {
     background-image: url('../img/logo@2x.png');
-    background-size: 230px 66px; } }
+    background-size: 250px 72px; } }
 
 h2 {
   width: 100%;
@@ -97,9 +97,14 @@ h4 {
   transition: all 0.5s ease-in-out;
   opacity: 0;
   transform: translate3d(0, -50%, 0); }
+  .home .hero {
+    width: 100%;
+    margin-bottom: 2.5em;
+    text-align: center;
+    font-size: 24px; }
   .home h2 {
     text-align: center;
-    margin-bottom: 1em; }
+    margin-bottom: 0.25em; }
 
 .gender div {
   padding: 1em;
@@ -124,7 +129,7 @@ h4 {
   border-color: #BD10E0; }
 
 .choose-city {
-  margin: 4.5em 0 3em;
+  margin: 5em 0 3em;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
@@ -213,10 +218,14 @@ h4 {
   margin-right: 1.75em; }
   .item-detail figure {
     width: 150px;
-    height: 230px;
+    height: 190px;
     overflow: hidden; }
   .item-detail img {
     transition: all 0.25s ease-in-out; }
+  .item-detail .placeholder {
+    width: 100%;
+    height: 100%;
+    background: #ED8383; }
 
 .item-caption {
   position: absolute;
@@ -250,9 +259,10 @@ h4 {
   margin-bottom: 1.275em; }
 
 .buyable-item {
-  transition-delay: 0.4s !important; }
-  .buyable-item figure {
-    background: #d38; }
+  transition-delay: 0.4s !important;
+  /* figure {
+    background: #d38;
+  } */ }
   .buyable-item .item-detail {
     margin-bottom: 2em;
     text-decoration: none;
