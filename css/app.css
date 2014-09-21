@@ -1,0 +1,297 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html {
+  color: #1a1a1a;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif; }
+
+img {
+  max-width: 100%; }
+
+figure {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3 {
+  font-weight: 100; }
+
+h2 {
+  width: 100%;
+  font-size: 48px; }
+
+h3 {
+  font-size: 36px; }
+
+h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 0.75em; }
+
+#header {
+  padding: 1.5em 0;
+  border-bottom: 1px solid #ccc; }
+
+.home {
+  margin-top: 6em;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  transform: translate3d(0, -50%, 0); }
+  .home h2 {
+    text-align: center;
+    margin-bottom: 1em; }
+
+.gender div {
+  padding: 1em;
+  border: 3px solid transparent;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px; }
+
+.man-selected .gender.woman div:hover {
+  border-color: #ccc; }
+.man-selected .gender.man div {
+  color: #4A90E2;
+  border-color: #4A90E2; }
+
+.woman-selected .gender.man div:hover {
+  border-color: #ccc; }
+.woman-selected .gender.woman div {
+  color: #BD10E0;
+  border-color: #BD10E0; }
+
+.choose-city {
+  margin: 4.5em 0 3em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .choose-city .city {
+    flex: 1;
+    margin-right: 2em;
+    text-align: center;
+    opacity: 0;
+    transform: translate3d(0, -2%, 0);
+    transition: all 0.5s ease-in-out 0.35s; }
+    .choose-city .city:last-child {
+      margin-right: 0; }
+    .choose-city .city:nth-child(1) {
+      transition-delay: 0.3s; }
+    .choose-city .city:nth-child(2) {
+      transition-delay: 0.5s; }
+    .choose-city .city:nth-child(3) {
+      transition-delay: 0.7s; }
+    .choose-city .city:nth-child(4) {
+      transition-delay: 0.9s; }
+  .choose-city h3 {
+    margin-bottom: 0.375em; }
+  .choose-city img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-in-out; }
+
+.city-holder {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; }
+
+.city-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.46);
+  color: #fff;
+  opacity: 0;
+  transition: all 0.2s ease-in-out; }
+  .city-caption div {
+    transform: scale(1.5);
+    transition: all 0.2s ease-in-out; }
+
+.city:hover img {
+  transform: scale(1.25); }
+
+.city:hover .city-caption {
+  opacity: 1; }
+  .city:hover .city-caption div {
+    transform: scale(1); }
+
+.list-step, .detail-step, .keywords-list {
+  margin-top: 3em; }
+
+.keyword-detail {
+  margin-bottom: 3em;
+  opacity: 0;
+  transform: translate3d(-5%, 0, 0);
+  transition: all 0.4s ease-in-out; }
+  .keyword-detail:nth-of-type(1) {
+    transition-delay: 0.9s; }
+  .keyword-detail:nth-of-type(2) {
+    transition-delay: 1.1s; }
+
+.images-list {
+  position: relative;
+  width: 100%;
+  margin: 0.75em 0; }
+
+.list-cage {
+  width: 100%;
+  overflow: hidden; }
+
+.list-overflow {
+  width: 999em; }
+
+.item-detail {
+  position: relative;
+  float: left;
+  margin-right: 1.75em; }
+  .item-detail figure {
+    width: 150px;
+    height: 230px;
+    overflow: hidden; }
+  .item-detail img {
+    transition: all 0.25s ease-in-out; }
+
+.item-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.46);
+  opacity: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out; }
+  .item-caption span {
+    color: #fff;
+    padding: 0 0.5em; }
+
+.item-detail:hover .item-caption {
+  opacity: 1; }
+.item-detail:hover img {
+  transform: scale(1.25); }
+
+.item-price {
+  position: absolute;
+  bottom: -2em;
+  color: #1a1a1a; }
+
+.help-text {
+  color: #999;
+  margin-bottom: 1.275em; }
+
+.buyable-item {
+  transition-delay: 0.4s !important; }
+  .buyable-item figure {
+    background: #d38; }
+  .buyable-item .item-detail {
+    margin-bottom: 2em;
+    text-decoration: none;
+    display: block; }
+  .buyable-item .buy-button {
+    position: absolute;
+    right: -35%;
+    bottom: 10px;
+    width: 60%;
+    padding: 0.45em 0.2em 0.45em 0.45em;
+    background: #3af;
+    font-size: 12px;
+    transition: all 0.2s ease-in-out; }
+    .buyable-item .buy-button strong {
+      text-transform: uppercase; }
+  .buyable-item:hover .buy-button {
+    right: -5%; }
+
+.buy-items {
+  opacity: 0;
+  transition: all 0.3s ease-in-out; }
+
+.buy-items h3 {
+  margin-bottom: 0.0875em; }
+
+.keywords-list {
+  padding-top: 1.25em;
+  opacity: 0;
+  transform: translate3d(20%, 0, 0);
+  transition: all 0.5s ease-in-out; }
+  .keywords-list li {
+    font-size: 18px;
+    margin-bottom: 0.375em;
+    cursor: pointer; }
+  .keywords-list li[data-type="man"], .keywords-list li[data-type="woman"] {
+    display: none; }
+
+.woman-selected .keywords-list li[data-type="woman"] {
+  display: block; }
+.woman-selected .keywords-list li.selected {
+  color: #BD10E0; }
+
+.man-selected .keywords-list li[data-type="man"] {
+  display: block; }
+.man-selected .keywords-list li.selected {
+  color: #4A90E2; }
+
+.detail-step .keyword-detail:nth-child(1) {
+  transition-delay: 0.4s; }
+
+.show-home .home-page {
+  display: block; }
+.show-home .main-content {
+  display: none; }
+
+.home-transition-in .home, .home-transition-in .city {
+  opacity: 1;
+  transform: translate3d(0, 0, 0); }
+
+.show-list .home-page {
+  display: none; }
+.show-list .main-content {
+  display: block; }
+.show-list .list-step {
+  display: block; }
+.show-list .detail-step {
+  display: none; }
+
+.list-transition-in .keywords-list {
+  opacity: 1;
+  transform: translate3d(0, 0, 0); }
+.list-transition-in .keyword-detail {
+  opacity: 1;
+  transform: translate3d(0, 0, 0); }
+
+.list-transition-out .keyword-detail {
+  opacity: 0;
+  transform: translate3d(5%, 0, 0);
+  transition-delay: 0s; }
+
+.show-detail .home-page {
+  display: none; }
+.show-detail .main-content {
+  display: block; }
+.show-detail .list-step {
+  display: none; }
+.show-detail .detail-step {
+  display: block; }
+.show-detail .keywords-list {
+  transition-delay: 10s; }
+
+.detail-transition-in .keywords-list {
+  opacity: 1;
+  transform: translate3d(0, 0, 0); }
+.detail-transition-in .keyword-detail {
+  opacity: 1;
+  transform: translate3d(0, 0, 0); }
+.detail-transition-in .buy-items {
+  opacity: 1; }
