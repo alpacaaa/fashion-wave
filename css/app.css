@@ -20,15 +20,22 @@ h1, h2, h3 {
   font-weight: 100; }
 
 h1 {
+  width: 230px;
+  height: 66px; }
+
+h1 a {
+  display: block;
+  text-decoration: none;
   background: url('../img/logo.png');
   text-indent: -999em;
-  width: 230px;
-  height: 66px;
+  width: 100%;
+  height: 100%;
   background-size: cover; }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-  h1 {
-    background-image: url('../img/logo@2x.png'); } }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  h1 a {
+    background-image: url('../img/logo@2x.png');
+    background-size: 230px 66px; } }
 
 h2 {
   width: 100%;
@@ -45,6 +52,40 @@ h4 {
 #header {
   padding: 0.75em 0;
   border-bottom: 1px solid #ccc; }
+
+@keyframes pound {
+  to {
+    transform: scale(1.4); } }
+
+#footer {
+  margin: 0.75em 0 1.75em;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #999; }
+  #footer p {
+    margin-top: 6px; }
+  #footer .heart {
+    display: inline-block;
+    color: #EE7660;
+    animation: pound 1.25s infinite alternate;
+    transform-origin: center;
+    top: -1px;
+    position: relative;
+    margin: 0 0.25em; }
+  #footer .tag-logo {
+    background: url('/img/tag-logo-mini.png');
+    margin-left: 0.5em;
+    width: 24px;
+    height: 26px; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  #footer .tag-logo {
+    background-image: url('../img/tag-logo-mini@2x.png');
+    background-size: 24px 26px; } }
 
 .home {
   margin-top: 6em;
