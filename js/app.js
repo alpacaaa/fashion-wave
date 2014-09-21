@@ -15,6 +15,8 @@ $(document).ready(function() {
 
   // INIT (chrome moddafaca)
   $(window).load(function() {
+    html.addClass('show home');
+
     setTimeout(function() {
       html.addClass('home-transition-in');
     }, 100);
